@@ -11,8 +11,8 @@ count = 0
 #print("a")#检测程序是否运行1
 #t=open("train.json", "a")
 #d=open("dev.json", "a")#另一种写入方式，与下面搭配。
-with open('test1.txt', 'r',encoding="utf-8") as e :#这里要改成你聊天记录文件的文件名
-    for l in e:
+with open('test1.txt', 'r',encoding="utf-8") as e:#这里要改成你聊天记录文件的文件名
+    for _ in e:
         count += 1
 e.close()
 print("你的聊天记录共",count,"行，现在开始执行\n\n\n\n")
