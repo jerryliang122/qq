@@ -23,7 +23,14 @@ for msg in messages:
     data1 = msg[0].split(' ', 2)[-1]
     data2 = msg[1].replace('\n', '')
     # 过滤掉图片、语音、文件、视频、表情
-    if '[图片]' in data2 or '[语音]' in data2 or '[文件]' in data2 or '[视频]' in data2 or '[表情]' in data2 or '' == data2:
+    if (
+        '[图片]' in data2
+        or '[语音]' in data2
+        or '[文件]' in data2
+        or '[视频]' in data2
+        or '[表情]' in data2
+        or data2 == ''
+    ):
         continue
     #进一步处理字符串
     if '(' in data1:
